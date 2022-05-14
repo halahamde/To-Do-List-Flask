@@ -1,0 +1,35 @@
+{%extends 'navhome.html'%}
+{%block content%}
+<div class="text-center">
+    <div class="container text-center">
+        <br><h2 class="h2 text-center">Tasks Data</h2><br>
+        <div class="row">
+            <div class="col">ID</div>
+            <div class="col">Title</div>
+            <div class="col">Description</div>
+            <div class="col">Status</div>
+        </div>
+
+        {% for task in tasks %}
+
+        <div class="row">
+            <div class="col text-secondary">
+                {{task.id}}
+            </div>
+            <div class="col text-secondary">
+                {{task.title}}
+            </div>
+
+            <div class="col text-secondary ">
+                {{task.description}}
+            </div>
+
+            <div class="col text-secondary">
+                {{task.status}}
+            </div>
+        </div>
+        {%endfor%}
+
+    </div>
+</div>
+{%endblock%}
